@@ -19,6 +19,7 @@ const favoritesReducer = (state = initialState, action) => {
     }
     case ADD_FAVORITE:
       return {
+        ...state,
         ...[favorites, action.payload],
       };
     case REMOVE_FAVORITE:

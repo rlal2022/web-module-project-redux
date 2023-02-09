@@ -34,8 +34,10 @@ const MovieHeader = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    appTitle: state.movieReducer.props.appTitle,
-    displayFavorites: state.favoritesReducer.displayFavorites,
+    appTitle: state.appTitle,
+    displayFavorites: state.displayFavorites,
   };
+  // appTitle: state.movieReducer.appTitle,
+  // displayFavorites: state.favoritesReducer.displayFavorites,
 };
 export default connect(mapStateToProps, { toggleFavorites })(MovieHeader);

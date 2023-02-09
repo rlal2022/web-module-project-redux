@@ -18,6 +18,10 @@ const reducer = (state = initialState, action) => {
         ...action.payload,
         id: Date.now(),
       };
+      return {
+        ...state,
+        movies: [...state.movies, newMovie],
+      };
     default:
       return state;
   }
