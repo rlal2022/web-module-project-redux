@@ -37,7 +37,7 @@ const FavoriteMovieList = (props) => {
 
 const mapStateToProps = (state) => {
   return {
-    favorites: state.favorites,
+    favorites: state.favorite.favorites,
   };
 };
-export default connect(mapStateToProps)(FavoriteMovieList);
+export default connect(mapStateToProps, { removeFavorite })(FavoriteMovieList);
